@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-    {% load static %}
-        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
-<title>{{ flatpage.title}}</title>
-</head>
-<body>
+{% extends 'flatpages/default.html' %}
+<title>{% block title %} {{ flatpage.title}} {% endblock title %} </title>
+
+
+
+{% block content %}
     {{ flatpage.content}}
     {{ flatpage.content}}
 <hr>
 Страница с изменениями - повтор.
-</body>
-</html>
+{% endblock content %}
